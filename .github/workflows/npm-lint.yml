@@ -14,9 +14,14 @@ on:
         required: false
         type: string
         default: "24"
+    
+    outputs:
+      npm_lint_exit_code:
+        description: "The exit code from the npm lint command"
+        value: ${{ jobs.npm-lint.outputs.exit_code }}
 
 jobs:
-  npm_lint:
+  npm-lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,5 +38,11 @@ jobs:
         run: npm ci
 
       - name: Run NPM lint
+        id: npm-lint
+        shell: bash
         working-directory: ${{ inputs.working_directory }}
-        run: npm run lint
+        run: |
+          npm run lint
+
+          EXIT_CODE=$?
+          echo "exit_code=$EXIT_CODE" >> $GITHUB_OUTPUT
