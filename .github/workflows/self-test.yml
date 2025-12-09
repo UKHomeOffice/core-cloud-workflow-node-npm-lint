@@ -37,8 +37,6 @@ jobs:
 
       - name: Assert failure
         run: |
-          echo
-
           if [ "${{ steps.lint.outputs.npm_lint_exit_code }}" -eq 0 ]; then
             echo "Expected npm lint to fail but it succeeded."
             exit 1
