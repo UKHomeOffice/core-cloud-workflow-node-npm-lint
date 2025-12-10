@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   test-valid:
-    name: Test - Valid Node npm Lint
+    name: Test - Valid Node npm lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -23,7 +23,7 @@ jobs:
           working_directory: "tests/test-lint-valid"
 
   test-invalid:
-    name: Test - Invalid Node npm Lint
+    name: Test - Invalid Node npm lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
