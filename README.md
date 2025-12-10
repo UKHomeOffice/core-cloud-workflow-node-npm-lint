@@ -1,4 +1,4 @@
-# Core Cloud Workflow Node NPM lint
+# Core Cloud Workflow Node npm lint
 
 A GitHub Actions workflow for running npm lint on Node.js projects to identify and report code quality issues.
 

@@ -2,7 +2,7 @@ name: Self Test - npm lint action
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
     branches:
       - main
@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   test-valid:
-    name: Test - Valid Node NPM Lint
+    name: Test - Valid Node npm Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -20,20 +20,20 @@ jobs:
       - name: Run npm lint (valid config)
         uses: ./
         with:
-          working_directory: 'tests/test-lint-valid'
+          working_directory: "tests/test-lint-valid"
 
   test-invalid:
-    name: Test - Invalid Node NPM Lint
+    name: Test - Invalid Node npm Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
 
-      - name: Run npm lint (valid config)
+      - name: Run npm lint (invalid config)
         id: lint
         uses: ./
         continue-on-error: true
         with:
-          working_directory: 'tests/test-lint-invalid'
+          working_directory: "tests/test-lint-invalid"
 
       - name: Assert failure
         run: |

@@ -1,8 +1,8 @@
-name: Node NPM Lint
+name: Node npm Lint
 
 inputs:
   working_directory:
-    description: "Directory to run NPM lint in (default: repository root)"
+    description: "Directory to run npm lint in (default: repository root)"
     required: false
     type: string
     default: "."
@@ -16,7 +16,7 @@ inputs:
 outputs:
   npm_lint_exit_code:
     description: "The exit code from the npm lint command"
-    value: ${{ steps.npm-lint.outputs.exit_code }}
+    value: ${{ steps.npm_lint.outputs.exit_code }}
 
 runs:
   using: "composite"
@@ -35,8 +35,8 @@ runs:
       working-directory: ${{ inputs.working_directory }}
       run: npm ci
 
-    - name: Run NPM lint
-      id: npm-lint
+    - name: Run npm lint
+      id: npm_lint
       shell: bash
       working-directory: ${{ inputs.working_directory }}
       run: |
