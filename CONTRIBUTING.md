@@ -11,7 +11,7 @@ This repository contains:
 
 * `action.yaml` — composite GitHub Action for running npm lint
 
-* `tests/**` — intentionally invalid Terraform/Terragrunt test fixtures
+* `tests/**` — intentionally invalid node test fixtures
 
 * `sonar-project.properties` — SAST configuration
 

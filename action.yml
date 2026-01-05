@@ -1,4 +1,4 @@
-name: Node npm Lint
+name: Node npm lint
 
 inputs:
   working_directory:
@@ -43,4 +43,4 @@ runs:
         npm run lint
 
         EXIT_CODE=$?
-          echo "exit_code=$EXIT_CODE" >> $GITHUB_OUTPUT
+        echo "exit_code=$EXIT_CODE" >> $GITHUB_OUTPUT

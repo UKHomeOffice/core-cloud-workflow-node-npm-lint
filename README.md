@@ -33,6 +33,7 @@ jobs:
 | `node_version` | Node version | No | `24` |
 
 
+## Outputs
 
 | Output | Description |
 |--------|-------------|

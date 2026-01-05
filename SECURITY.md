@@ -93,7 +93,7 @@ Dependencies must satisfy:
 
 | Area                    | Policy                                               |
 | ----------------------- | ---------------------------------------------------- |
-| Test Terraform files    | Intentionally invalid & excluded from SAST           |
+| Test Node files         | Intentionally invalid & excluded from SAST           |
 | Example Code            | Excluded from SAST, for demonstration only           |
 | Real Code               | Not permitted in this repository                     |
 | Secrets                 | Must use repo/org-encrypted secrets, never committed |
